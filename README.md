@@ -1,2 +1,2 @@
-# channel-listener
-Copy new posts to another channel
+# Telegram Channel Listener
+Copy new posts from defined channels to another channel

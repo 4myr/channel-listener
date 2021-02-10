@@ -72,11 +72,10 @@ class MainEventHandler extends EventHandler
             
             $to_id = $update['message']['to_id']['channel_id'] ?? null;
             $from_id = $update['message']['from_id'] ?? null;
-            $message = $update['message']['message'] ?? null;
-            echo "To_ID: ". $to_id . "\n";
+            $message = $update['message']['message'] ?? null
+                
             if ($to_id) {
                 if (in_array($to_id, SOURCE_CHANNELS)) {
-                    echo "Yes";
                     // If message is set means message is only text and not media!
                     if ($message) {
                         yield $this->messages->sendMessage(['peer' => TARGET_CHANNEL, 'message' => $message]);

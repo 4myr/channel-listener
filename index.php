@@ -75,8 +75,10 @@ class MainEventHandler extends EventHandler
             $message = $update['message']['message'] ?? null;
                 
             if ($to_id && in_array($to_id, SOURCE_CHANNELS))  {
-                    if ($message)
-                        yield $this->messages->sendMessage(['peer' => TARGET_CHANNEL, 'message' => $message]);
+                if (isset($update['message']['media']))
+                    yield $this->messages->sendMedia(['peer' => TARGET_CHANNEL, 'media' => $update, 'message' => $message, 'no_webpage' => true]);
+                else
+                    yield $this->messages->sendMessage(['peer' => TARGET_CHANNEL, 'message' => $message, 'no_webpage' => true]);
             }
         } catch (RPCErrorException $e) {
             //

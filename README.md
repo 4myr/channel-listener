@@ -3,8 +3,8 @@ Copy new posts from defined channels to another channel (MadelineProto)
 
 My Telegram: [@SUDOYYM](https://t.me/sudoyum)
 
-### Installation
-* Linux (Ubuntu):
+# Installation
+### Linux (Ubuntu):
 
 1. Install php7.4+ & extensions:
 ```
@@ -18,7 +18,7 @@ sudo apt-get install php7.4 php7.4-dev php7.4-xml php7.4-zip php7.4-gmp php7.4-c
 4. `./launch.sh` to launch bot, and login for first time.
 5. (You can use `screen ./launch.sh` to launch bot & deattach terminal by `CTRL + SHIFT + D`
 
-* Windows:
+### Windows:
 
 1. Install php7.4+ with {xml,zip,gmp,cli,mbstring,json} extensions
 2. Add php bin path to PATH

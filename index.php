@@ -74,13 +74,9 @@ class MainEventHandler extends EventHandler
             $from_id = $update['message']['from_id'] ?? null;
             $message = $update['message']['message'] ?? null;
                 
-            if ($to_id) {
-                if (in_array($to_id, SOURCE_CHANNELS)) {
-                    // If message is set means message is only text and not media!
-                    if ($message) {
+            if ($to_id && in_array($to_id, SOURCE_CHANNELS))  {
+                    if ($message)
                         yield $this->messages->sendMessage(['peer' => TARGET_CHANNEL, 'message' => $message]);
-                    }
-                }
             }
         } catch (RPCErrorException $e) {
             //

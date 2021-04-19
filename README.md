@@ -1,7 +1,8 @@
 # Telegram Channel Listener (MadelineProto)
 Copy new posts from defined channels to another channel (MadelineProto)
+My Telegram: [@SUDOYYM](https://t.me/sudoyum)
 
-* Install
+### Installation
 1. Install php7.4+ & extensions:
 ```
 sudo apt-get install python-software-properties software-properties-common screen
